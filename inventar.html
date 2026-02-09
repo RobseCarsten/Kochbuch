@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kochbuch</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="index.html">
+            <img class="logo-img" src="pics/home-logo.webp" alt="">
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="cooking.html">
+                    Kochen
+                </a>
+                <img class="pan" src="pics/kochen/pan.png" alt="pan with vegetables">
+            </li>
+            <li>
+                <a href="inventar.html">
+                    Inventar
+                </a>
+                <img class="stock" src="pics/inventar/vorrat.png" alt="">
+            </li>
+            <li>
+                <a href="suplements.html">
+                    Suplements
+                </a>
+                <img class="markt" src="pics/sups/market.png" alt="supermarket">
+            </li>
+        </ul>
+        <ul class="login">
+            <li><input type="username" placeholder="Mama oder Papa"></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>
+            Was hast du Zuhause?
+        </h2>
+        <div class="food-list">
+            <form id="zutatenForm">
+                <div class="vegetables">
+                    <h3>
+                        Gemüse:
+                    </h3>
+                    <label class="checkbox-v">
+                        <input id="Zwiebeln" type="checkbox" name="zutaten" value="Zwiebeln">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input id="Knoblauch" type="checkbox" name="zutaten" value="Knoblauch">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/garlic.png" alt="garlic" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input id="Ingwer" type="checkbox" name="zutaten" value="Ingwer">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/ginger.png" alt="ginger" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input id="Paprika" type="checkbox" name="zutaten" value="Paprika">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/paprika.png" alt="bellpepper" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input  type="checkbox" name="zutaten" value="Pilze">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/shrooms.png" alt="mushroom" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input type="checkbox" name="zutaten" value="Karrote">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/carrot.png" alt="carrot" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input type="checkbox" name="zutaten" value="Tomate">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/tomato.png" alt="tomato" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-v">
+                        <input type="checkbox" name="zutaten" value="Zucchini">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/zucchini.png" alt="zucchini" class="veg-img">
+                    </label><br>
+                </div>
+                <div class="freezer">
+                    <h3>
+                        Kühlschrank:
+                    </h3>
+                    <label class="checkbox-f">
+                        <input type="checkbox" name="zutaten" value="onion">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-f">
+                        <input type="checkbox" name="zutaten" value="onion">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-f">
+                        <input type="checkbox" name="zutaten" value="onion">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-f">
+                        <input type="checkbox" name="zutaten" value="onion">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                    <label class="checkbox-f">
+                        <input type="checkbox" name="zutaten" value="onion">
+                        <span class="checkbox-new"></span>
+                        <img src="pics/food/onion.png" alt="onion" class="veg-img">
+                    </label><br>
+                </div>
+                <button type="submit" id="btn-inv">Küche Updaten</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

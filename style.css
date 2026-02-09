@@ -1,0 +1,540 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffe4c4;
+    font-family: "Spicy Sale", cursive;
+    box-sizing: border-box;
+    src: url("./fonts/Spicy\ Sale.ttf") format("truetype");
+}
+
+a,
+p {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.navbar {
+    display: flex;
+    align-items: stretch;
+    background-color: green;
+    margin-bottom: 5vh;
+    height: 11vh;
+    border-bottom: 10px solid darkgreen;
+}
+
+.nav-links {
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+}
+
+nav .nav-links li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav .nav-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.pan {
+    position: absolute;
+    bottom: -69%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5vw;
+    height: 8vh;
+    z-index: 1;
+    transition: bottom 0.5s ease;
+}
+
+.stock {
+    position: absolute;
+    bottom: -69%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5vw;
+    height: 8vh;
+    z-index: 1;
+    transition: bottom 0.5s ease;
+}
+
+.markt {
+    position: absolute;
+    bottom: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5vw;
+    height: 8vh;
+    z-index: 1;
+    transition: bottom 0.5s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+.logo-img {
+    display: flex;
+    height: 9vh;
+    width: 6.5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-links :hover {
+    background-color: rgb(79, 79, 231);
+}
+
+nav .nav-links :hover a {
+    background-color: transparent;
+}
+
+.nav-links li:hover .pan,
+.nav-links li:hover .stock,
+.nav-links li:hover .markt {
+    bottom: 0%;
+    /* oder z. B. 5px, je nach gewünschter Endposition */
+}
+
+.login {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-right: 3vw;
+    height: 100%;
+}
+
+nav input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+nav input::placeholder {
+    color: white;
+}
+
+/* index */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box1 {
+    display: flex;
+    margin: 5vh;
+    padding: 2vh;
+    border: 4px solid black;
+    border-radius: 15px;
+    max-width: 40vw;
+}
+
+/* cooking */
+
+.cooking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid;
+    border-radius: 8px;
+    margin: 5vw;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.pan2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8vw;
+    height: 12vh;
+}
+
+.cooking-book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.searchbar-cooking {
+    padding-bottom: 3vh;
+}
+
+/* dish card */
+.dish-click {
+    margin: 2vw;
+}
+
+.dish {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: max-content;
+    padding: 2vh;
+}
+
+.dish-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dish-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: auto;
+}
+
+.dish-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dish-time,
+.dish-difficulty {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dish-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dish-ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-image: url(pics/kochen/papyrus-mid.png);
+    background-size: 100% auto;
+}
+
+.papyrus {
+    display: flex;
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* inventar */
+
+.food-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.vegetables,
+.freezer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+}
+
+.checkbox-v,
+.checkbox-f {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    padding-bottom: 4.075vw;
+}
+
+.checkbox-v {
+    background-image: url(pics/inventar/regal-back.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: 8.075vw;
+}
+
+.checkbox-f {
+    background-image: url(pics/inventar/freezer-back.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: 8.075vw;
+}
+
+.checkbox-v input,
+.checkbox-f input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-v .checkbox-new::before {
+    content: "";
+    display: block;
+    width: 9vw;
+    height: 4vw;
+    background-image: url(pics/inventar/leer-Regal.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox-f .checkbox-new::before {
+    content: "";
+    display: block;
+    width: 9vw;
+    height: 6vw;
+    background-image: url(pics/inventar/freezer-empty.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox-v input:checked + .checkbox-new::before {
+    content: "";
+    display: block;
+    width: 9vw;
+    height: 4vw;
+    background: url(pics/inventar/voll-Regal.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox-f input:checked + .checkbox-new::before {
+    content: "";
+    display: block;
+    width: 9vw;
+    height: 6vw;
+    background: url(pics/inventar/freezer-full.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.veg-img {
+    width: 9vw;
+    height: auto;
+    object-fit: contain;
+}
+
+/* sups */
+
+.content-sups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    box-sizing: border-box;
+}
+
+.food-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    background-image: url(pics/sups/cardboard.png);
+    background-size: 100% auto;
+}
+
+.cardboard-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+}
+
+.s-container,
+.searchbar-cooking {
+    margin-bottom: 5vh;
+}
+
+.s-container input,
+.searchbar-cooking input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.s-container input::placeholder,
+.searchbar-cooking input::placeholder {
+    color: black;
+}
+
+.food-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    margin: 1vw;
+    padding: 5vh !important;
+    background-image: url(pics/sups/post-it.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transform: rotate(15deg);
+}
+
+.food-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 15vh;
+    font-size: 0.5rem;
+    padding: 10vh;
+    transform: rotate(-10deg);
+}
+
+/* Dishes */
+
+.recipe {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-cookingbook {
+    position: absolute;
+    top: 20vh;
+    width: 60%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.inner-book {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    top: 24vh;
+    padding-left: 4%;
+    width: 46%;
+    height: 580%;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.page-js {
+    width: 100%;
+    height: 100%;
+}
+
+.right-side {
+    padding-top: 5%;
+}
+
+.right-side,
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.text-l,
+.text-r {
+    width: 100%;
+    height: 100%;
+    overflow-wrap: break-word;
+}
+
+.text-r {
+    text-align: center;
+}
+
+.btn-book {
+    all: unset;
+    font-weight: bold;
+    font-size: xx-large;
+    width: 5vw;
+    height: 3vh;
+    position: absolute;
+    &:hover {
+        cursor: pointer;
+        color: red;
+    }
+}
+.l-b {
+    margin-left: -102%;
+}
+.r-b {
+    margin-left: 102%;
+}

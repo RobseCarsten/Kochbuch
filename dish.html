@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <img class="logo-img" src="pics/home-logo.webp" alt="" />
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="cooking.html"> Kochen </a>
+                    <img
+                        class="pan"
+                        src="pics/kochen/pan.png"
+                        alt="pan with vegetables"
+                    />
+                </li>
+                <li>
+                    <a href="inventar.html"> Inventar </a>
+                    <img class="stock" src="pics/inventar/vorrat.png" alt="" />
+                </li>
+                <li>
+                    <a href="suplements.html"> Suplements </a>
+                    <img
+                        class="markt"
+                        src="pics/sups/market.png"
+                        alt="supermarket"
+                    />
+                </li>
+            </ul>
+            <ul class="login">
+                <li><input type="username" placeholder="Mama oder Papa" /></li>
+            </ul>
+        </nav>
+        <div class="recipe">
+            <h2 id="heading">
+                <!-- js -->
+            </h2>
+            <div class="img-cookingbook">
+                <img src="./pics/dishes/cookbook.png" alt="" />
+            </div>
+            <div class="inner-book" id="inner-book">
+                <!--Zutaten
+                Rezept-->
+                <button class="btn-book l-b" onclick="bookPage('prev')">
+                    <
+                </button>
+                <div class="page-js" id="page-js">
+                    <!-- js -->
+                </div>
+                <button class="btn-book r-b" onclick="bookPage('next')">
+                    >
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
