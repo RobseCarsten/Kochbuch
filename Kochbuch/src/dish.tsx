@@ -50,7 +50,7 @@ function dish({ activeDish }: dishProps) {
         <div className="recipe">
             <h2 id="heading">{activeDish?.title}</h2>
             <div className="img-cookingbook">
-                <img src="../pics/dishes/cookbook.png" alt="" />
+                <img src="/pics/dishes/cookbook.png" alt="" />
             </div>
             <div className="inner-book" id="inner-book">
                 <button className="btn-book l-b" onClick={() => bookPage(0)}>

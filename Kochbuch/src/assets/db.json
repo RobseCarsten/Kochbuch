@@ -36,5 +36,11 @@
                 "3. <br> <br> Zitronenscheibe"
             ]
         }
+    ],
+
+    "groceries": [
+        {
+            "vegetables": []
+        }
     ]
 }

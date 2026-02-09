@@ -3,17 +3,10 @@ import type { Dish } from "./App";
 
 type cookingProps = {
     dishes: Dish[] | [];
-    setDishes: (value: React.SetStateAction<Dish[] | []>) => void;
-    setIsActive: (s: string) => void;
     setActiveDish: (D: Dish) => void;
 };
 
-function cooking({
-    dishes,
-    setDishes,
-    setIsActive,
-    setActiveDish,
-}: cookingProps) {
+function cooking({ dishes, setActiveDish }: cookingProps) {
     const [filteredDishes, setFilteredDishes] = useState<Dish[] | []>(dishes);
 
     function searchRecepies(event: string) {
@@ -31,7 +24,7 @@ function cooking({
                 <div className="intro">
                     <img
                         className="pan2"
-                        src="../pics/kochen/pan.png"
+                        src="/pics/kochen/pan.png"
                         alt="pan with vegetables"
                     />
                     <h1 className="heading">Kochbuch</h1>
@@ -56,7 +49,6 @@ function cooking({
                                         setActiveDish(
                                             searchRecepies(dish.title)[0],
                                         );
-                                        setIsActive("dish");
                                         console.log(searchRecepies(dish.title));
                                     }}
                                 >
@@ -64,7 +56,7 @@ function cooking({
                                         <div className="dish-left-side">
                                             <img
                                                 className="dish-img"
-                                                src="../pics/dishes/${title}.png"
+                                                src="/pics/dishes/${title}.png"
                                                 alt=""
                                             />
                                             <h2 className="dish-title">
@@ -84,7 +76,7 @@ function cooking({
                                         <div className="dish-right-side">
                                             <img
                                                 className="papyrus"
-                                                src="../pics/kochen/papyrus-top.png"
+                                                src="/pics/kochen/papyrus-top.png"
                                                 alt=""
                                             />
                                             <div className="dish-ingredients">
@@ -119,7 +111,7 @@ function cooking({
                                             </div>
                                             <img
                                                 className="papyrus"
-                                                src="../pics/kochen/papyrus-bottom.png"
+                                                src="/pics/kochen/papyrus-bottom.png"
                                                 alt=""
                                             />
                                         </div>

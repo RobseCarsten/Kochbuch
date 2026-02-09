@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cooking from "./cooking";
 import Navbar from "./NavBar";
 import Dish from "./dish";
+import Landing from "./landing";
 import DB from "./assets/db.json";
 import type { ReactNode } from "react";
 
@@ -16,7 +18,6 @@ export type Dish = {
 
 function App() {
     const [dishes, setDishes] = useState<Dish[] | []>([]);
-    const [isActive, setIsActive] = useState<string | "">("");
     const [activeDish, setActiveDish] = useState<Dish | null>(null);
 
     useEffect(() => {
@@ -28,16 +29,26 @@ function App() {
 
     return (
         <>
-            <Navbar isActive={isActive} setIsActive={setIsActive} />
-            {isActive == "cooking" && (
-                <Cooking
-                    dishes={dishes}
-                    setDishes={setDishes}
-                    setIsActive={setIsActive}
-                    setActiveDish={setActiveDish}
-                />
-            )}
-            {isActive == "dish" && <Dish activeDish={activeDish} />}
+            <Router>
+                <Navbar />
+
+                <Routes>
+                    <Route path="/" element={<Landing />} />
+                    <Route
+                        path="/cooking"
+                        element={
+                            <Cooking
+                                dishes={dishes}
+                                setActiveDish={setActiveDish}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/dish"
+                        element={<Dish activeDish={activeDish} />}
+                    />
+                </Routes>
+            </Router>
         </>
     );
 }

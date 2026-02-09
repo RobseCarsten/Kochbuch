@@ -1,35 +1,27 @@
-import type { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-type NavbarProps = {
-    isActive: string;
-    setIsActive: (b: string) => void;
-};
-
-function navbar({ isActive, setIsActive }: NavbarProps) {
+function navbar() {
     return (
         <nav className="navbar">
-            <a className="logo" href="index.html">
+            <Link className="logo" to="/">
                 <img className="logo-img" src="../pics/home-logo.webp" alt="" />
-            </a>
+            </Link>
             <ul className="nav-links ">
                 <li>
-                    <a
-                        className="hover:cursor-pointer"
-                        onClick={() => setIsActive("cooking")}
-                    >
+                    <Link className="hover:cursor-pointer" to="/cooking">
                         Kochen
-                    </a>
+                    </Link>
                     <img
                         className="pan"
-                        src="../pics/kochen/pan.png"
+                        src="/pics/kochen/pan.png"
                         alt="pan with vegetables"
                     />
                 </li>
                 <li>
-                    <a href="inventar.html">Inventar</a>
+                    <Link to="/dish">Gerichte</Link>
                     <img
                         className="stock"
-                        src="../pics/inventar/vorrat.png"
+                        src="/pics/inventar/vorrat.png"
                         alt=""
                     />
                 </li>
@@ -37,7 +29,7 @@ function navbar({ isActive, setIsActive }: NavbarProps) {
                     <a href="suplements.html">Suplements</a>
                     <img
                         className="markt"
-                        src="../pics/sups/market.png"
+                        src="/pics/sups/market.png"
                         alt="supermarket"
                     />
                 </li>
