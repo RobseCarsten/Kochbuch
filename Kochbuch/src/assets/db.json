@@ -1,0 +1,40 @@
+{
+    "dishes": [
+        {
+            "title": "Curry",
+            "time": 30,
+            "difficulty": 5,
+            "ingredients": ["Zwiebeln", "Knoblauch", "Ingwer"],
+            "herbs": [
+                "Curry (Paste)",
+                "Salz",
+                "Pfeffer",
+                "Gara Masala",
+                "Chili"
+            ],
+            "steps": [
+                "1. \n\n  Zwiebeln, Knoblauch und Ingwer kleinhacken  leicht anschwitzen und nach ein paar Minuten die Linsen dazu geben  Gewürze und Kartoffeln hinzugeben",
+                "2. \n\n  wasser kochen",
+                "3. \n\n  Zitronenscheibe"
+            ]
+        },
+        {
+            "title": "Curry",
+            "time": 30,
+            "difficulty": 5,
+            "ingredients": ["Zwiebeln", "Knoblauch", "Ingwer"],
+            "herbs": [
+                "Curry (Paste)",
+                "Salz",
+                "Pfeffer",
+                "Gara Masala",
+                "Chili"
+            ],
+            "steps": [
+                "1. <br> <br> Zwiebeln, Knoblauch und Ingwer kleinhacken <br> <br> leicht anschwitzen und nach ein paar Minuten die Linsen dazu geben <br> <br> Gewürze und Kartoffeln hinzugeben",
+                "2. <br> <br> wasser kochen",
+                "3. <br> <br> Zitronenscheibe"
+            ]
+        }
+    ]
+}

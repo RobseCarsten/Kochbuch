@@ -86,7 +86,7 @@ const currentFileName = currentPath.substring(currentPath.lastIndexOf("/") + 1);
 if (currentFileName === "inventar.html") {
     // Store checkbox states in localStorage
     const checkboxes = document.querySelectorAll(
-        'input[type="checkbox"][name="zutaten"]'
+        'input[type="checkbox"][name="zutaten"]',
     );
     function storeCheckboxStates() {
         const states = {};
@@ -98,7 +98,7 @@ if (currentFileName === "inventar.html") {
     // Load checkbox states from localStorage
     function loadCheckboxStates() {
         const states = JSON.parse(
-            localStorage.getItem("zutatenCheckboxStates") || "{}"
+            localStorage.getItem("zutatenCheckboxStates") || "{}",
         );
         checkboxes.forEach((cb) => {
             if (states.hasOwnProperty(cb.value)) {
@@ -111,7 +111,7 @@ if (currentFileName === "inventar.html") {
     document.addEventListener("DOMContentLoaded", () => {
         loadCheckboxStates();
         const checkboxes = document.querySelectorAll(
-            'input[type="checkbox"][name="zutaten"]'
+            'input[type="checkbox"][name="zutaten"]',
         );
         checkboxes.forEach((cb) => {
             cb.addEventListener("change", storeCheckboxStates);
@@ -120,7 +120,7 @@ if (currentFileName === "inventar.html") {
     btn_inv.addEventListener("click", (event) => {
         event.preventDefault();
         const checked = document.querySelectorAll(
-            'input[type="checkbox"][name="zutaten"]:checked'
+            'input[type="checkbox"][name="zutaten"]:checked',
         );
         const db_ingredients = [];
         checked.forEach((cb) => {
@@ -130,86 +130,86 @@ if (currentFileName === "inventar.html") {
     });
 }
 
-if (currentFileName === "cooking.html") {
-    const cookingBook = document.getElementById("cooking-book");
-    cookingBook.innerHTML = dishes
-        .map((Dish) => {
-            const { title, time, difficulty, ingredients, herbs } = Dish;
-            return `
-        <a class="dish-click" data-name="${title}" href="dish.html">
-        <div class="dish">
-        <div class="dish-left-side">
-        <img class="dish-img" src="pics/dishes/${title}.png" alt="">
-        <h2 class="dish-title">
-        ${title}
-        </h2>
-                <div class="dish-info">
-                <div class="dish-time">
-                        <p>
-                            Zeit:
-                            </p>
-                        <p>
-                        ${time} min
-                        </p>
-                        </div>
-                        <div class="dish-difficulty">
-                        <p>
-                        Aufwand:
-                        </p>
-                        <p>
-                        ${difficulty}/10
-                        </p>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="dish-right-side">
-                <img class="papyrus" src="pics/kochen/papyrus-top.png" alt="">
-                <div class="dish-ingredients">
-                    <h4>
-                    Zutaten:
-                    </h4>
-                    <ul>
-                    ${ingredients
-                        .map(
-                            (ingredient) => `
-                        <li>
-                        ${ingredient}
-                        </li>                        
-                    `
-                        )
-                        .join("")}
-                    <li>
-                    Gewürze:
-                            <ul>
-                            ${herbs
-                                .map(
-                                    (herbs) => `
-                                <li>
-                                ${herbs}
-                                </li>
-                            `
-                                )
-                                .join("")}
-                            </ul>
-                            </li>
-                        </ul>
-                        </div>
-                <img class="papyrus" src="pics/kochen/papyrus-bottom.png" alt="">
-            </div>
-        </div>
-        </a>`;
-        })
-        .join("");
+// if (currentFileName === "cooking.html") {
+//     const cookingBook = document.getElementById("cooking-book");
+//     cookingBook.innerHTML = dishes
+//         .map((Dish) => {
+//             const { title, time, difficulty, ingredients, herbs } = Dish;
+//             return `
+//         <a class="dish-click" data-name="${title}" href="dish.html">
+//         <div class="dish">
+//         <div class="dish-left-side">
+//         <img class="dish-img" src="pics/dishes/${title}.png" alt="">
+//         <h2 class="dish-title">
+//         ${title}
+//         </h2>
+//                 <div class="dish-info">
+//                 <div class="dish-time">
+//                         <p>
+//                             Zeit:
+//                             </p>
+//                         <p>
+//                         ${time} min
+//                         </p>
+//                         </div>
+//                         <div class="dish-difficulty">
+//                         <p>
+//                         Aufwand:
+//                         </p>
+//                         <p>
+//                         ${difficulty}/10
+//                         </p>
+//                         </div>
+//                         </div>
+//                         </div>
+//                         <div class="dish-right-side">
+//                 <img class="papyrus" src="pics/kochen/papyrus-top.png" alt="">
+//                 <div class="dish-ingredients">
+//                     <h4>
+//                     Zutaten:
+//                     </h4>
+//                     <ul>
+//                     ${ingredients
+//                         .map(
+//                             (ingredient) => `
+//                         <li>
+//                         ${ingredient}
+//                         </li>
+//                     `
+//                         )
+//                         .join("")}
+//                     <li>
+//                     Gewürze:
+//                             <ul>
+//                             ${herbs
+//                                 .map(
+//                                     (herbs) => `
+//                                 <li>
+//                                 ${herbs}
+//                                 </li>
+//                             `
+//                                 )
+//                                 .join("")}
+//                             </ul>
+//                             </li>
+//                         </ul>
+//                         </div>
+//                 <img class="papyrus" src="pics/kochen/papyrus-bottom.png" alt="">
+//             </div>
+//         </div>
+//         </a>`;
+//         })
+//         .join("");
 
-    const dishLinks = document.querySelectorAll(".dish-click");
+//     const dishLinks = document.querySelectorAll(".dish-click");
 
-    dishLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            const tar = link.getAttribute("data-name");
-            localStorage.setItem("currentDish", tar);
-        });
-    });
-}
+//     dishLinks.forEach((link) => {
+//         link.addEventListener("click", () => {
+//             const tar = link.getAttribute("data-name");
+//             localStorage.setItem("currentDish", tar);
+//         });
+//     });
+// }
 
 if (currentFileName === "dish.html") {
     const currentDish = localStorage.getItem("currentDish");
@@ -242,7 +242,7 @@ if (currentFileName === "dish.html") {
         <li>
             ${ingredient}
         </li>                        
-    `
+    `,
         )
         .join("")}
     <li>
@@ -254,7 +254,7 @@ if (currentFileName === "dish.html") {
             <li>
                 ${herbs}
             </li>
-        `
+        `,
             )
             .join("")}
         </ul>
