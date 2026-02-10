@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Dish } from "./App";
+import { Link } from "react-router-dom";
 
 type cookingProps = {
     dishes: Dish[] | [];
@@ -43,20 +44,20 @@ function cooking({ dishes, setActiveDish }: cookingProps) {
                     {filteredDishes &&
                         filteredDishes.map((dish) => {
                             return (
-                                <a
+                                <Link
                                     className="dish-click hover:cursor-pointer"
                                     onClick={() => {
                                         setActiveDish(
                                             searchRecepies(dish.title)[0],
                                         );
-                                        console.log(searchRecepies(dish.title));
                                     }}
+                                    to="/dish"
                                 >
                                     <div className="dish">
                                         <div className="dish-left-side">
                                             <img
                                                 className="dish-img"
-                                                src="/pics/dishes/${title}.png"
+                                                src={`/pics/dishes/${dish.title}.png`}
                                                 alt=""
                                             />
                                             <h2 className="dish-title">
@@ -116,7 +117,7 @@ function cooking({ dishes, setActiveDish }: cookingProps) {
                                             />
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             );
                         })}
                 </div>

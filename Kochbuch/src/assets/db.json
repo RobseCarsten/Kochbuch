@@ -40,7 +40,87 @@
 
     "groceries": [
         {
-            "vegetables": []
+            "vegetables": [
+                {
+                    "name": "Zwiebeln",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Knoblauch",
+                    "image": "/pics/food/garlic.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Ingwer",
+                    "image": "/pics/food/ginger.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Paprika",
+                    "image": "/pics/food/paprika.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Pilze",
+                    "image": "/pics/food/shrooms.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Karotte",
+                    "image": "/pics/food/carrot.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Tomate",
+                    "image": "/pics/food/tomato.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Zucchini",
+                    "image": "/pics/food/zucchini.png",
+                    "isChecked": false
+                }
+            ],
+            "freezer": [
+                {
+                    "name": "Kühlschrank Item 1",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Kühlschrank Item 2",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Kühlschrank Item 3",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Kühlschrank Item 4",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Kühlschrank Item 5",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                }
+            ],
+            "dry": [
+                {
+                    "name": "Reis",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                },
+                {
+                    "name": "Nudeln",
+                    "image": "/pics/food/onion.png",
+                    "isChecked": false
+                }
+            ]
         }
     ]
 }

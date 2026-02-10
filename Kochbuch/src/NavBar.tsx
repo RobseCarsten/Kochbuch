@@ -18,7 +18,9 @@ function navbar() {
                     />
                 </li>
                 <li>
-                    <Link to="/dish">Gerichte</Link>
+                    <Link className="hover:cursor-pointer" to="/inventory">
+                        Inventar
+                    </Link>
                     <img
                         className="stock"
                         src="/pics/inventar/vorrat.png"
@@ -26,7 +28,9 @@ function navbar() {
                     />
                 </li>
                 <li>
-                    <a href="suplements.html">Suplements</a>
+                    <Link className="hover:cursor-pointer" to="/suplements">
+                        Suplements
+                    </Link>
                     <img
                         className="markt"
                         src="/pics/sups/market.png"
